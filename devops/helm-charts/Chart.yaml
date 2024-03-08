@@ -1,0 +1,4 @@
+apiVersion: v1
+description: ODE Event Logger
+name: "ode-event-logger"
+version: 0.1.0

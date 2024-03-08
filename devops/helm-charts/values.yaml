@@ -1,0 +1,13 @@
+# Service-specific configurations for ode-event-logger
+eventLogger:
+  name: ode-event-logger
+  imageRepository: cosysdev.azurecr.io/ode-event-logger
+  kafka:
+    groupId: 'event-logger-group'
+  service:
+    port: 80
+  probes:
+    enabled: false
+  ingress:
+    host: event-logger.api.mound-rd.cosysdev.com  
+  resources: {}

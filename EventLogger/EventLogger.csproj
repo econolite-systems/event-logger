@@ -1,0 +1,24 @@
+ <Project Sdk="Microsoft.NET.Sdk.Web">
+	 <!-- # SPDX-License-Identifier: MIT-->
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>Econolite.Ode.$(MSBuildProjectName)</AssemblyName>
+    <RootNamespace>Econolite.Ode.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+    <UserSecretsId>f6bc5d13-3eb1-402a-85b8-408a2607f29d</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+	  <Copyright>2023-&lt;&lt;CURRENT_YEAR&gt;&gt; Econolite Systems, Inc.</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.18.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="$(SolutionDir)\common\Extensions.AspNet\Extensions.AspNet.csproj" />
+    <ProjectReference Include="$(SolutionDir)\common\Monitoring.HealthChecks.Mongo\Monitoring.HealthChecks.Mongo.csproj" />
+    <ProjectReference Include="..\Services.EventLogger\Services.EventLogger.csproj" />
+  </ItemGroup>
+
+</Project>
